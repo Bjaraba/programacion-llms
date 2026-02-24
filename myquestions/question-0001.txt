@@ -1,0 +1,34 @@
+# Problema: Detección de clientes en riesgo de abandono (Churn)
+Tienes datos de clientes de una empresa de telecomunicaciones. Tu tarea es construir un clasificador binario que prediga si un cliente abandonará el servicio (churn = 1) o no (churn = 0).
+
+## Dataset: Descrición del dataset 
+
+- tenure_months -> Meses como cliente
+- monthly_charge -> Cargo mensual en USD
+- num_complaints -> Quejas registradas
+- num_products -> Productos contratados
+- last_login_days -> Días desde último login
+- churn -> Etiqueta (0 = se queda, 1 = abandona) **Variable Objetivo**
+
+## Tu tarea
+Implementa la función predict_churn(df_train, df_test) que:
+
+- Separe features y target (churn) en train y test
+- Impute nulos con la mediana usando SimpleImputer
+- Escale features con StandardScaler
+- Entrene un RandomForestClassifier(n_estimators=100, random_state=42)
+- Prediga sobre df_test
+- Retorne un diccionario con:
+  - "predictions": array de predicciones binarias (0 o 1)
+  - "probabilities": array con la probabilidad de churn (clase 1)
+  - "accuracy": accuracy sobre el test set
+  - "feature_importances": dict {nombre_feature: importancia}
+
+
+### Firma esperada de la función 
+
+```{python}
+def predict_churn(df_train: pd.DataFrame, df_test: pd.DataFrame) -> dict:
+    # Tu código aquí
+    ...
+```
