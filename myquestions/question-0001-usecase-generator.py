@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-def generate_exercise_io():
+def generar_caso_de_uso_predict_churn():
     np.random.seed(7)
     n_train, n_test = 800, 200
 
