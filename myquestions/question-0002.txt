@@ -1,0 +1,27 @@
+# Predicción de precio de autos usados
+Dado un dataset de autos usados, predice el precio de venta (price_usd) usando regresión.
+
+
+## Descripción del dataset 
+- km_driven -> Kilómetros recorridos
+- age_years -> Antigüedad del auto
+- engine_cc -> Cilindrada del motor
+- num_owners -> Número de dueños previos
+- fuel_efficiency -> Km por litro
+- price_usd -> Precio (target)
+
+## Firma esperada
+
+´´´{python}
+def predict_car_price(df_train: pd.DataFrame, df_test: pd.DataFrame) -> dict:
+    ...
+´´´
+
+## Debe retornar:
+
+- "predictions": precios predichos
+- "rmse": error cuadrático medio
+- "r2": coeficiente de determinación
+- "coefficients": dict {feature: coeficiente} del modelo
+
+Usa un Pipeline con SimpleImputer(median) → StandardScaler → Ridge(alpha=10)
