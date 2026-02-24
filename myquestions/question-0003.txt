@@ -1,0 +1,30 @@
+# Clasificación de calidad de vino
+
+Dado un dataset de vinos, clasifica si la calidad es alta (quality = 1, puntaje ≥ 7) o baja (quality = 0).
+
+
+## Descripción del dataset 
+
+- sugar -> Azúcar residual (g/L)
+- alcohol -> % de alcohol
+- acidity -> Acidez fija
+- ph -> Nivel de pH
+- density -> Densidad del vino
+- sulphates -> Sulfatos (g/L)
+- quality -> Etiqueta (0=baja, 1=alta)
+
+## Firma esperada
+´´´ {python}
+def classify_wine_quality(df_train: pd.DataFrame, df_test: pd.DataFrame) -> dict:
+    ...
+
+´´´
+
+Debe retornar:
+
+- "predictions": clases predichas (0 o 1)
+- "probabilities": probabilidad de calidad alta
+- "f1_score": F1-score sobre test
+- "confusion_matrix": matriz de confusión como array numpy
+
+Usa SimpleImputer(median) → StandardScaler → GradientBoostingClassifier(n_estimators=100, random_state=42)
