@@ -1,0 +1,27 @@
+# Segmentación de clientes + predicción de gasto
+Primero agrupa clientes en 3 segmentos con KMeans, luego predice el gasto mensual de cada uno
+entrenando un modelo de regresión por segmento.
+
+## Descripción del dataset
+
+- age -> Edad del cliente
+- income_usd -> Ingreso anual
+- visits_per_month -> Visitas mensuales
+- avg_basket_usd -> Ticket promedio por visita
+- monthly_spend_usd -> Gasto mensual (target)
+- loyalty_years -> Años como cliente fiel
+
+## Firma esperada
+
+´´´{python}
+def segment_and_predict(df_train: pd.DataFrame, df_test: pd.DataFrame) -> dict:
+    ...
+´´´
+## Debe retornar:
+
+- "segments_test": array con el segmento asignado (0, 1 o 2) para cada fila de test
+- "predictions": gasto predicho para cada cliente de test
+- "rmse_per_segment": dict {segmento: rmse} calculado sobre test
+- "segment_sizes": dict {segmento: cantidad_clientes} en train
+
+Usa KMeans(n_clusters=3, random_state=42) sobre features escaladas y un Ridge por segmento.
