@@ -1,4 +1,4 @@
 # programacion-llms
-- Estudiante 
+- **Estudiante** \
 Brayan Stiven Jaraba Alvarez \
 [b.jaraba@udea.edu.co]()
