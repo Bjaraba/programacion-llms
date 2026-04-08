@@ -7,7 +7,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_squared_error, r2_score
 
 
-def generador_casos_de_uso_predict_car_price():
+def generar_caso_de_uso_predict_car_price():
 
     def make_data(n, seed):
         rng = np.random.RandomState(seed)

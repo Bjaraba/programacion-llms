@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_squared_error
 
-def generador_caso_de_uso_segment_and_predict():
+def generar_caso_de_uso_segment_and_predict():
 
     def make_data(n, seed):
         rng = np.random.RandomState(seed)

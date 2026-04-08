@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import f1_score, confusion_matrix
 
-def generador_caso_de_uso_classify_wine_quality():
+def generar_caso_de_uso_classify_wine_quality():
 
     def make_data(n, seed):
         rng = np.random.RandomState(seed)
@@ -60,5 +60,5 @@ def generador_caso_de_uso_classify_wine_quality():
         "f1_score":        f1_score(y_test, preds),
         "confusion_matrix": confusion_matrix(y_test, preds)
     }
-    return (df_train, df_test), expected_output
+    return{ df_train, df_test}, expected_output
 
