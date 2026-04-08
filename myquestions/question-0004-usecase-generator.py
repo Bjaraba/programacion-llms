@@ -92,4 +92,4 @@ def generar_caso_de_uso_segment_and_predict():
         "rmse_per_segment": rmse_per_seg,
         "segment_sizes": segment_sizes,
     }
-    return {df_train, df_test}, expected_output
+    return {"df_train": df_train, "df_test": df_test}, expected_output

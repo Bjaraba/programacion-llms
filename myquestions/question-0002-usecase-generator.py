@@ -66,4 +66,4 @@ def generar_caso_de_uso_predict_car_price():
         "r2": r2_score(y_test, preds),
         "coefficients": coefs,
     }
-    return{ df_train, df_test}, expected_output
+    return{ "df_train": df_train, "df_test":  df_test}, expected_output
