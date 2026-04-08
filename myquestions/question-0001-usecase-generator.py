@@ -84,4 +84,4 @@ def generar_caso_de_uso_predict_churn():
         "feature_importances": importances,
     }
 
-    return (df_train, df_test), expected_output
+    return {"df_train": df_train, "df_test": df_test}, expected_output
